@@ -1,0 +1,315 @@
+/* default css start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background-color: rgb(255, 248, 239);
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* default css end */
+
+  h1 {
+    text-align: center;
+    position: relative;
+    padding-block: 50px;
+    color: rgb(89, 145, 211);
+    font-size: 60px;
+  }
+
+  h2 {
+    float: left;
+    position: relative;
+    color: rgb(89, 145, 211);
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+
+h4 {
+
+    float: left;
+    position: relative;
+    margin-top: 30px;
+    color: rgb(89, 145, 211);
+    font-size: 15px;
+    padding-top: 50px;
+
+}
+
+  .title {
+    text-align: center;
+  }
+  
+  .global {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 50px; /* Ajouter une marge de 50 pixels à gauche */
+    color: rgb(89, 145, 211);
+  }
+  
+
+  .global > * {
+    margin-right: 10px; /* Ajouter une marge de 10 pixels à droite des éléments */
+  }
+  
+  
+  
+  .fa-phone, .fa-map, .fa-dog {
+    margin-right: 10px;
+    color: rgb(89, 145, 211);
+  }
+  
+
+.image {
+    width: 100%;
+    height: 380px;
+    background: url(img/chienetchat.jpeg) no-repeat;
+    background-size: cover;
+}
+
+/* navbar regular css start */
+.navbar-area {
+    background: rgb(245, 245, 220);
+}
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(89, 145, 211);
+    text-decoration: none;
+}
+
+.site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.site-navbar ul li a {
+    color: rgb(89, 145, 211);
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler {
+    border: 3px solid rgb(89, 145, 211);
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: .3s;
+}
+
+.nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+    background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+/* nav-toggler css start */
+
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 720px;
+    }
+
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+    }
+
+    .site-navbar {
+        min-height: 60px;
+    }
+
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 60px);
+        left: 0;
+        top: 60px;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #444;
+        background-color: rgba(0, 0, 0, .75);
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-navbar ul li a {
+        padding: 25px;
+    }
+
+    .site-navbar ul li a:hover {
+        background-color: rgb(245, 245, 220);
+    }
+
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+
+    .intro-area h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+}
+
+.formulaire {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 248, 239);
+    position: absolute;
+    top: 190%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+form {
+    padding: 30px;
+    border-radius: 10px;
+  }
+  form h1 {
+    font-size: 20px;
+  }
+  form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #747cdf;
+  }
+  form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  form .corps-formulaire .groupe {
+    position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  form .corps-formulaire .gauche .groupe input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid #c9c9c9;
+    outline-color: #747cdf;
+    border-radius: 5px;
+  }
+  form .corps-formulaire .gauche .groupe i {
+    position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #747cdf;
+  }
+  form .corps-formulaire .droite {
+    margin-left: 40px;
+  }
+  form .corps-formulaire .droite .groupe {
+    height: 100%;
+  }
+  form .corps-formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid #747cdf;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    height: 72%;
+  }
+  form .pied-formulaire button {
+    margin-top: 10px;
+    background-color: #747cdf;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  form .pied-formulaire button:hover {
+    transform: scale(1.05);
+  }
+  
+  @media screen and (max-width: 920px) {
+    form .corps-formulaire .droite {
+      margin-left: 0px;
+    }
+  }
+
+  .iconUser i {
+    font-size: 27px;
+    margin: -5px;
+  }
